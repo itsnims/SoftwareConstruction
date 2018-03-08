@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-16-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-16-0 http://www.eiffel.com/developers/xml/configuration-1-16-0.xsd" name="mlgenerator" uuid="339881D9-243E-4B31-AE3F-303646E232F5">
+	<target name="mlgenerator">
+		<root class="APPLICATION" feature="make"/>
+		<file_rule>
+			<exclude>/CVS$</exclude>
+			<exclude>/EIFGENs$</exclude>
+			<exclude>/\.git$</exclude>
+			<exclude>/\.svn$</exclude>
+		</file_rule>
+		<option warning="true">
+			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
+		</option>
+		<setting name="console_application" value="true"/>
+		<capability>
+			<catcall_detection support="none"/>
+			<concurrency support="scoop"/>
+			<void_safety support="all"/>
+		</capability>
+		<precompile name="base_pre" location="$ISE_PRECOMP\base-scoop-safe.ecf"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
+		<library name="testing" location="$ISE_LIBRARY\library\testing\testing-safe.ecf"/>
+		<cluster name="mlgenerator" location=".\" recursive="true">
+			<tests name="anchor_link_tests" location="\Users\Nimra\sc-hs17-group12\sc-hs17-group12\src\anchor_link_tests\"/>
+			<tests name="document_tests" location="\Users\Nimra\sc-hs17-group12\src\document_tests\"/>
+		</cluster>
+	</target>
+</system>
